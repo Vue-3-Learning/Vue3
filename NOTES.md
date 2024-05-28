@@ -1,6 +1,7 @@
 
 ---
 Already Finished the Basics 
+Course: Vue - The Complete Guide (incl. Router & Composition API) by Maximilian Schwarzmüller
 ## Event Modifiers
 -- For example you have a form and inside that you've a button and an input the problem is that (by default) when you click on the button it reloads the page..what if you want to handle this manually in vue or js so we use @click.prevent in <form> it is like event.preventDefault in js 
 ## v-once 
