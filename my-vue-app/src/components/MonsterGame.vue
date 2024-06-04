@@ -17,7 +17,7 @@
           </div>
       </section>
       <section id="controls">
-          <button>ATTACK</button>
+          <button @click="attackMonster">ATTACK</button>
           <button>SPECIAL ATTACK</button>
           <button>HEAL</button>
           <button>SURRENDER</button>
@@ -38,10 +38,19 @@ export default {
         }
     },
     methods: {
-        attack() {
-
+        getRandomVal(min,max){
+            return Math.floor(Math.random() * (max-min) + min)
         },
-
+        attackMonster() {
+            //we'll attack the monster and reduce its health with a random number for example value between 5 and 12 so
+           const attackValue = this.getRandomVal(5,12);
+           this.monsterHealth -= attackValue;
+           this.attackPlayer()
+        },
+        attackPlayer(){
+            const attackValue  = this.getRandomVal(8,15);
+            this.playerHealth -= attackValue
+        }
     }
 }
 </script>
