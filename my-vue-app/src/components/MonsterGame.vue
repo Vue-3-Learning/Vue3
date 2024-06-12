@@ -19,7 +19,7 @@
       <section id="controls">
           <button @click="attackMonster" >ATTACK</button>
           <button @click="specialAttack" :disabled="canUseSA">SPECIAL ATTACK</button>
-          <button>HEAL</button>
+          <button @click="healPlayer">HEAL</button>
           <button>SURRENDER</button>
       </section>
       <section id="log" class="container">
@@ -69,6 +69,17 @@ export default {
             const attackValue  = this.getRandomVal(10,25);
             this.monsterHealth -= attackValue;
             this.attackPlayer();
+        },
+        healPlayer(){
+            this.currentRound++
+            const healValue = this.getRandomVal(8,20);
+            if(this.playerHealth + healValue > 100){
+                this.playerHealth = 100
+            }
+            else{
+                this.playerHealth += healValue
+            }
+            this.attackPlayer()
         }
     }
 }
