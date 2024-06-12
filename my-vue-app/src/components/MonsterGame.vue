@@ -16,6 +16,12 @@
               <div class="healthbar__value" :style="playerBarStyle"></div>
           </div>
       </section>
+      <div class="container" v-if="winner">
+        <h2>Game Over</h2>
+        <h3 v-if="winner === 'monster'">You Lost</h3>
+        <h3 v-else-if = "winner === 'player'">You Win</h3>
+        <h3 v-else>Match Draw</h3>
+      </div>
       <section id="controls">
           <button @click="attackMonster" >ATTACK</button>
           <button @click="specialAttack" :disabled="canUseSA">SPECIAL ATTACK</button>
@@ -35,7 +41,28 @@ export default {
         return {
             playerHealth: 100,
             monsterHealth: 100,
-            currentRound: 0
+            currentRound: 0,
+            winner: null
+        }
+    },
+    watch:{
+        playerHealth(val){
+            if(val<=0 && this.monsterHealth <= 0){
+                //draw
+                this.winner = 'draw'
+            }else if(val<=0){
+                //palyer lost
+                this.winner = 'monster'
+            }
+        },
+        monsterHealth(val){
+            if(val<=0 && this.playerHealth <= 0){
+                //draw
+                this.winner = 'draw'
+            }else if(val<=0){
+                //monster lost
+                this.winner = 'player'
+            }
         }
     },
     computed:{
