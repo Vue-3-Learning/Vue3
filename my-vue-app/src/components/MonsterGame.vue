@@ -21,12 +21,13 @@
         <h3 v-if="winner === 'monster'">You Lost</h3>
         <h3 v-else-if = "winner === 'player'">You Win</h3>
         <h3 v-else>Match Draw</h3>
+        <button @click="restart">Start Over</button>
       </div>
-      <section id="controls">
+      <section id="controls" v-else>
           <button @click="attackMonster" >ATTACK</button>
           <button @click="specialAttack" :disabled="canUseSA">SPECIAL ATTACK</button>
           <button @click="healPlayer">HEAL</button>
-          <button>SURRENDER</button>
+          <button @click="surrender">SURRENDER</button>
       </section>
       <section id="log" class="container">
           <h2>Battle Log</h2>
@@ -67,9 +68,15 @@ export default {
     },
     computed:{
         playerBarStyle(){
+            if(this.playerHealth < 0){
+                return { width: '0%' }
+            }
             return { width: this.playerHealth + '%' }
         },
         monsterBarStyle(){
+            if(this.monsterHealth < 0){
+                return { width: '0%' }
+            }
             return { width: this.monsterHealth + '%' }
         }, 
      canUseSA(){
@@ -107,6 +114,15 @@ export default {
                 this.playerHealth += healValue
             }
             this.attackPlayer()
+        },
+        restart(){
+            this.playerHealth = 100,
+            this.monsterHealth = 100,
+            this.currentRound = 0,
+            this.winner = null
+        },
+        surrender(){
+            this.winner = 'monster'
         }
     }
 }
