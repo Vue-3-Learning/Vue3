@@ -31,7 +31,11 @@
       </section>
       <section id="log" class="container">
           <h2>Battle Log</h2>
-          <ul></ul>
+          <ul>
+          <li v-for="(msg,index) in logMessages" :key="index">
+            {{ msg.actionBy }} -- {{ msg.actionType }} -- {{ msg.actionValue }}
+          </li>
+          </ul>
       </section>
   </div>
   </div>
@@ -43,7 +47,8 @@ export default {
             playerHealth: 100,
             monsterHealth: 100,
             currentRound: 0,
-            winner: null
+            winner: null,
+            logMessages : []
         }
     },
     watch:{
@@ -91,17 +96,20 @@ export default {
             //we'll attack the monster and reduce its health with a random number for example value between 5 and 12 so
            const attackValue = this.getRandomVal(5,12);
            this.monsterHealth -= attackValue;
+           this.addLogMsg('player','attack', attackValue);
            this.attackPlayer();
            this.currentRound++
         },
         attackPlayer(){
             const attackValue  = this.getRandomVal(8,15);
-            this.playerHealth -= attackValue
+            this.playerHealth -= attackValue;
+            this.addLogMsg('monster','attack', attackValue)
         },
         specialAttack(){
             this.currentRound++
             const attackValue  = this.getRandomVal(10,25);
             this.monsterHealth -= attackValue;
+            this.addLogMsg('player','attack', attackValue)
             this.attackPlayer();
         },
         healPlayer(){
@@ -113,16 +121,25 @@ export default {
             else{
                 this.playerHealth += healValue
             }
+            this.addLogMsg('player','heal', healValue)
             this.attackPlayer()
         },
         restart(){
             this.playerHealth = 100,
             this.monsterHealth = 100,
             this.currentRound = 0,
-            this.winner = null
+            this.winner = null,
+            this.logMessages = []
         },
         surrender(){
             this.winner = 'monster'
+        },
+        addLogMsg(who, what,value){
+            this.logMessages.unshift({
+                actionBy:who,
+                actionType: what,
+                actionValue: value
+            })
         }
     }
 }
