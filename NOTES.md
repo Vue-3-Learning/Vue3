@@ -36,4 +36,8 @@ for example you have a name data property and a watcher of that name() every tim
   ## Vue Reactivity
   - vue keeps track of data that is defined in data(){} it take all the properties defined there and merge them in a global behind the scene object the same object where your methods are merged
   - when it comes to data the important key thing vue does is change your data object into a reactive data object by escentialy wrapping your properties with js faeture called proxy
-
+ ## Refs
+ - vue has a feature that allow us to retrieve values from dom elements when you need them instead all the time (like in v-model or event.target.vlaue we retrieve with each kay stroke) and taht feature is called refs
+ - <input type="text" ref="userText"
+ - why am i doing this ? coz vue detects such refs and stores them internally , it bascially memorises that you need access to that element
+ - ``` setTxt(){ //instead of this.message = event.target.value ; this.message = this.$refs.userText //this points to the element //refs is a object full of key value pairs where the key is the ref identifier we defined in ele we access its value by .value}```
