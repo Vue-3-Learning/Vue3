@@ -33,4 +33,7 @@ for example you have a name data property and a watcher of that name() every tim
 - :class="addClass? 'red' : 'black'" 
 - :class="{demo: true, newClass: addClass}" //add demo every time and newClass only when addClass is true
 
+  ## Vue Reactivity
+  - vue keeps track of data that is defined in data(){} it take all the properties defined there and merge them in a global behind the scene object the same object where your methods are merged
+  - when it comes to data the important key thing vue does is change your data object into a reactive data object by escentialy wrapping your properties with js faeture called proxy
 
