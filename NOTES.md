@@ -42,5 +42,8 @@ for example you have a name data property and a watcher of that name() every tim
  - why am i doing this ? coz vue detects such refs and stores them internally , it bascially memorises that you need access to that element
  - ``` setTxt(){ //instead of this.message = event.target.value ; this.message = this.$refs.userText //this points to the element //refs is a object full of key value pairs where the key is the ref identifier we defined in ele we access its value by .value}```
 
+## How Vue Updates the DOM
 ![image](https://github.com/Vue-3-Learning/Vue3/assets/86046973/5b10bfaa-4a1f-43f4-a2d9-c35e52051cff)
+
+- all vue instructions are removed from the dom when its template is rendered in the dom
 
