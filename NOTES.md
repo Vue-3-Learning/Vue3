@@ -1,5 +1,5 @@
-[Event Modifiers](#event-modifiers)
-[watchers](#watchers)
+- [Event Modifiers](#event-modifiers)
+- [watchers](#watchers)
 ---
 Already Finished the Basics 
 Course: Vue - The Complete Guide (incl. Router & Composition API) by Maximilian Schwarzmüller
