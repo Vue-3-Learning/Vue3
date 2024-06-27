@@ -4,7 +4,8 @@
 
 - beforeCreate: the 1st lifecycle hook that is reached is beforeCreated lifeCycle pahse followed by the created life cycle phase the only difference is that beforeCreate is called before the app is fully initialised whereas creayed is called thereafter at this point of time we still have nothing on the screen though after created vue just knows its data properties and is aware of general app configuration 
 - created     ----|
-                  | ---now is the time when template is compiled so where all the dynamic placeholders, interpolations are removed and replaced by the concrete values taht should be shown to the users thereafter the beforeMount hook is reached 
+-                 | ---now is the time when template is compiled so where all the dynamic placeholders, interpolations are removed and replaced by the concrete values taht should be shown to the users thereafter the beforeMount hook is reached
+                   
 - beforeMount ----| beforeMount means that this is right before the vue is actually going to bring something to the screen so right before we can see something 
 - mounted: thats in the end just means that now we see something now vue app was initialised the template was compiled vue knows what to show on the screen and it handed those instructions of to the browser so that the browser really adds html elements with all the content we need as to find by our vue app 
 - beforeUpdate: in vue apps data changes at some point of time and that then triggers a new lifecycle the update lifecycle hook , now we reach the before update and there after the updated hook this is a bit like before create and created beforeUpdate is reached before the update is really processed internally by vue 
