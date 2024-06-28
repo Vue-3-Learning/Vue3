@@ -1,5 +1,9 @@
 - [Event Modifiers](#event-modifiers)
+- [Computed Properties](#computed-properties)
 - [watchers](#watchers)
+- [Data Binding and Event Binding](#data-binding-and-event-binding)
+- [class binding](#class-binding)
+- [Refs](#refs)
 ---
 Already Finished the Basics 
 Course: Vue - The Complete Guide (incl. Router & Composition API) by Maximilian Schwarzmüller
@@ -8,7 +12,7 @@ Course: Vue - The Complete Guide (incl. Router & Composition API) by Maximilian 
 ## v-once 
 for example you have a situation in which you have to preserve the initial state i.e counter initial vlaue and after increment value ..v-once tell vue that any dynamic data binding should only be evaluated once 
 
-## Data Binding + Event Binding
+## Data Binding and Event Binding
 ``` <input type="text" :value="name" @input="setName($event, lastName)">```
 ``` setName(event, lastName){this.name = event.input.value;} ```
 ``` resetInput(){this.name = ''}```
