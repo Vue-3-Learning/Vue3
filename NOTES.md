@@ -52,3 +52,5 @@ for example you have a name data property and a watcher of that name() every tim
 
 - all vue instructions are removed from the dom when its template is rendered in the dom
 
+## Node JS
+node js is a js runtimewhich allows to run javascript outside the browser, you could use js to write server side code using js 
