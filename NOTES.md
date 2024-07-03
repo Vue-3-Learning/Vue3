@@ -63,3 +63,13 @@ node js is a js runtimewhich allows to run javascript outside the browser, you c
 - this.$emit()
 - this.$emit('toggle-friend') ... toggle-friend method name..you can pass as many argument as you want and every extra argument will simply be the data that you pass together with your data this.$emit('toggle-friend', this.id) and that will then provided as a first argument to the method that listens to this event 
 - in parent we'll listen to it @toggle-friend="toggleFav"
+  ### custom events
+  you van add validation and can register the emits as props[not required but recommended] like emits:['name-of-event'] or
+
+  ``` emits:{
+ 'name-of-event': function(id){
+if(id){
+return true
+}
+}
+  } ```
