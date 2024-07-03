@@ -67,9 +67,9 @@ node js is a js runtimewhich allows to run javascript outside the browser, you c
   you van add validation and can register the emits as props[not required but recommended] like emits:['name-of-event'] or
 
   ``` emits:{ ```
- ``` 'name-of-event': function(id){```
-``` if(id){```
-``` return true```
+ ``` 'name-of-event': function(id){
+ if(id){
+ return true ```
 ``` } ```
 ``` } ```
  ``` } ```
