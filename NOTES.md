@@ -4,6 +4,8 @@
 - [Data Binding and Event Binding](#data-binding-and-event-binding)
 - [class binding](#class-binding)
 - [Refs](#refs)
+- [Node JS](#node-js)
+- [Emitting Events](#emitting-events)
 ---
 Already Finished the Basics 
 Course: Vue - The Complete Guide (incl. Router & Composition API) by Maximilian Schwarzmüller
@@ -54,3 +56,6 @@ for example you have a name data property and a watcher of that name() every tim
 
 ## Node JS
 node js is a js runtimewhich allows to run javascript outside the browser, you could use js to write server side code using js 
+
+## Emitting Events
+
