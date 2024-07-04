@@ -162,6 +162,7 @@ and in other component
 - $slots.slotname
 - shorthand #slotname instead of v-slot:
   ### scoped slots
+  - we only have access to whatever exists in the app scope so the goal is in one scope to access it in other we will use scoped slots
   ```
   <li v-for="goal in goals" :key="goal">
   <slot :item="goal"></slot>
