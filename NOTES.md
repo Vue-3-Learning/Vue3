@@ -88,6 +88,7 @@ node js is a js runtimewhich allows to run javascript outside the browser, you c
 - ``` topics: this.topics }```
 - ```}```
 ## Slots
+```
 <template>
     <section>
         <div>
@@ -132,3 +133,4 @@ the other component
     </base-card>
     </section>
   </template>
+```
