@@ -5,6 +5,7 @@
 - [class binding](#class-binding)
 - [Refs](#refs)
 - [Node JS](#node-js)
+- [Components](#components)
 - [Emitting Events](#emitting-events)
 - [Provide and Inject](#provide-and-inject)
 ---
@@ -57,6 +58,8 @@ for example you have a name data property and a watcher of that name() every tim
 
 ## Node JS
 node js is a js runtimewhich allows to run javascript outside the browser, you could use js to write server side code using js 
+## Components
+![image](https://github.com/Vue-3-Learning/Vue3/assets/86046973/fa195555-d4f6-4a24-9cf8-a56666bc8acd)
 
 ## Emitting Events
 
