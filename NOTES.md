@@ -88,6 +88,7 @@ node js is a js runtimewhich allows to run javascript outside the browser, you c
 - ``` topics: this.topics }```
 - ```}```
 ## Slots
+- we can pass dynamic content between the opening and closing tags of a component
 ```
 <template>
     <section>
@@ -133,4 +134,28 @@ the other component
     </base-card>
     </section>
   </template>
+```
+but sometimes you have a scenario when your custom component has lots of slots for example in our case we have only one slot <slot></slot> but it is not unrealistic that we have more than one ..here named slots come into play 
+- you dont have to name all slots but the unnamed slot will be the default slot and there should be only one unnamed slot ...and now you can assign the content to different slots
+```
+ <section>
+        <header>
+            <slot name="header"></slot>
+        </header>
+        <div>
+            <slot></slot>
+        </div>
+    </section>
+```
+and in other component 
+```
+<section>
+      <base-card>
+      <template v-slot:header>
+        <h3>{{ fullName }}</h3>
+        <base-badge :type="role" :caption="role.toUpperCase()"></base-badge>
+      </template>
+      <p>{{ infoText }}</p>
+    </base-card>
+    </section>
 ```
