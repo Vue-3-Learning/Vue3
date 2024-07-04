@@ -161,3 +161,17 @@ and in other component
 ```
 - $slots.slotname
 - shorthand #slotname instead of v-slot:
+  ### scoped slots
+  ```
+  <li v-for="goal in goals" :key="goal">
+  <slot :item="goal"></slot>
+  </li>
+  ```
+in the component where we're using it
+```
+<base-card>
+<template #default="slotProps">
+<p>{{slotProps.item}}</p>
+</template>
+</base-card>
+```
