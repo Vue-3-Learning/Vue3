@@ -160,3 +160,4 @@ and in other component
     </section>
 ```
 - $slots.slotname
+- shorthand #slotname instead of v-slot:
