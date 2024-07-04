@@ -78,3 +78,8 @@ node js is a js runtimewhich allows to run javascript outside the browser, you c
  we also neew to listen to this provided data
 - in the component you want to use the data ...we add inject method ..inject basically works as props inject:['data-name']
 - you can only inject what has been provided on a higher up level which means in a parent or ansestor component   
+- to avoid duplicate code i.e the property defined in provide as well as data
+- ``` provide() ```
+- ```return { ```
+- ``` topics: this.topics }```
+- ```}```
