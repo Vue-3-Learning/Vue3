@@ -8,6 +8,7 @@
 - [Components](#components)
 - [Emitting Events](#emitting-events)
 - [Provide and Inject](#provide-and-inject)
+- [Slots](#slots)
 ---
 Already Finished the Basics 
 Course: Vue - The Complete Guide (incl. Router & Composition API) by Maximilian Schwarzmüller
@@ -86,3 +87,48 @@ node js is a js runtimewhich allows to run javascript outside the browser, you c
 - ```return { ```
 - ``` topics: this.topics }```
 - ```}```
+## Slots
+<template>
+    <section>
+        <div>
+            <slot></slot>
+        </div>
+    </section>
+</template>
+<script>
+export default{
+
+}
+</script>
+<style scoped>
+ section {
+    margin: 2rem auto;
+    max-width: 30rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    padding: 1rem;
+  }
+  
+  section div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
+
+the other component 
+<template>
+    <section>
+      <base-card>
+      <h2>Available Badges</h2>
+      <ul>
+        <li>
+          <base-badge type="admin" caption="ADMIN"></base-badge>
+        </li>
+        <li>
+          <base-badge type="author" caption="AUTHOR"></base-badge>
+        </li>
+      </ul>
+    </base-card>
+    </section>
+  </template>
