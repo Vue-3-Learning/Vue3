@@ -159,3 +159,4 @@ and in other component
     </base-card>
     </section>
 ```
+- $slots.slotname
