@@ -6,6 +6,7 @@
 - [Refs](#refs)
 - [Node JS](#node-js)
 - [Emitting Events](#emitting-events)
+- [Provide and Inject](#provide-and-inject)
 ---
 Already Finished the Basics 
 Course: Vue - The Complete Guide (incl. Router & Composition API) by Maximilian Schwarzmüller
@@ -70,3 +71,10 @@ node js is a js runtimewhich allows to run javascript outside the browser, you c
  ```'name-of-event': function(id){ if(id){return true} ```
 ``` } ```
  ``` } ```
+
+## Provide and Inject
+- a pattern you can use to provide data in one place and inject it which means use it in another place 
+- provide{ data you want to provide}
+ we also neew to listen to this provided data
+- in the component you want to use the data ...we add inject method ..inject basically works as props inject:['data-name']
+- you can only inject what has been provided on a higher up level which means in a parent or ansestor component   
