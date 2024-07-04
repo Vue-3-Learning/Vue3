@@ -176,3 +176,13 @@ in the component where we're using it
 </template>
 </base-card>
 ```
+## Dynamic Component
+```
+   <button @click="setSelected(active-goals)"> //active-goals componnt name
+            Active Goal
+        </button>
+        <button @click="setSelected((manage-goals))">
+            Manage Goal
+        </button>
+        <component :is="selectedComponent"></component> //selectedComponent component name
+```
