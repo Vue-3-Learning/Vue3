@@ -207,4 +207,7 @@ keep alive allows you to tell vue that components should not be removed and dele
       </ul>
  </teleport>
 ```
-teleport wants one attribute the to prop and here you provide a css selector selecting an html element on your entire page where this content should actually be added to in the html markup so logically it still belongs to the component in which it is written you can still interact with methods but it will be rendered somewhere lese in the dom structure you can also refer to the tag i.e to="body" it means please render it in the body element directly and not deeply nested in this html structure 
+teleport wants one attribute the to prop and here you provide a css selector selecting an html element on your entire page where this content should actually be added to in the html markup so logically it still belongs to the component in which it is written you can still interact with methods but it will be rendered somewhere lese in the dom structure you can also refer to the tag i.e to="body" it means please render it in the body element directly and not deeply nested in this html structure
+
+![image](https://github.com/Vue-3-Learning/Vue3/assets/86046973/11607c83-90e6-4e87-bdbc-20f67eb444c0)
+
