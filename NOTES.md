@@ -9,6 +9,7 @@
 - [Emitting Events](#emitting-events)
 - [Provide and Inject](#provide-and-inject)
 - [Slots](#slots)
+- [Teleporting](#teleporting)
 ---
 Already Finished the Basics 
 Course: Vue - The Complete Guide (incl. Router & Composition API) by Maximilian Schwarzmüller
@@ -192,3 +193,18 @@ in our example lets suppose you have a input filed in manage goals component and
 <keep-alive> <component :is="selectedComponent"></component></keep-alive>
 ```
 keep alive allows you to tell vue that components should not be removed and deleted entirely but instead their state should be saved and they should be cached 
+ ## Teleporting
+ ```
+ <teleport to="#app">
+       <h2>Available Badges</h2>
+      <ul>
+        <li>
+          <base-badge type="admin" caption="ADMIN"></base-badge>
+        </li>
+        <li>
+          <base-badge type="author" caption="AUTHOR"></base-badge>
+        </li>
+      </ul>
+ </teleport>
+```
+teleport wants one attribute the to prop and here you provide a css selector selecting an html element on your entire page where this content should actually be added to in the html markup so logically it still belongs to the component in which it is written you can still interact with methods but it will be rendered somewhere lese in the dom structure you can also refer to the tag i.e to="body" it means please render it in the body element directly and not deeply nested in this html structure 
