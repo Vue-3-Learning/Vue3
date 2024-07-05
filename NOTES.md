@@ -186,3 +186,9 @@ in the component where we're using it
         </button>
         <component :is="selectedComponent"></component> //selectedComponent component name
 ```
+### Keep Alive dynamic components
+in our example lets suppose you have a input filed in manage goals component and you  type something in it and without saving it you clicked on the other tab all data will lost because when you chnage tab the other component get destroyed here <keep-alive> come into play
+```
+<keep-alive> <component :is="selectedComponent"></component></keep-alive>
+```
+keep alive allows you to tell vue that components should not be removed and deleted entirely but instead their state should be saved and they should be cached 
